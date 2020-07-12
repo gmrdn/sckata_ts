@@ -22,4 +22,12 @@ describe("String Calculator", () => {
   it("should add any amount of numbers", () => {
     expect(sc.add("1,2,3,4,5")).toBe(15);
   });
+
+  it("should allow newline as separator", () => {
+    expect(sc.add("1\n2,3")).toBe(6);
+  });
+
+  it("should support custom delimiters", () => {
+    expect(sc.add("//;\n1;2")).toBe(3);
+  });
 });

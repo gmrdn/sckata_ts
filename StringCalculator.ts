@@ -4,10 +4,18 @@ class StringCalculator {
       return 0;
     }
 
-    return numbers
-      .split(",")
-      .map((s) => parseInt(s))
-      .reduce((x, acc) => acc + x);
+    let values_as_numbers;
+    if (numbers.substr(0, 2) == "//") {
+      let custom_delimiter = ";";
+      values_as_numbers = numbers
+        .split("\n")[1]
+        .split(custom_delimiter)
+        .map((s) => parseInt(s));
+    } else {
+      const separator = /,|\n/;
+      values_as_numbers = numbers.split(separator).map((s) => parseInt(s));
+    }
+    return values_as_numbers.reduce((x: number, acc: number) => acc + x);
   }
 }
 
