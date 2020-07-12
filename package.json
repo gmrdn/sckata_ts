@@ -1,0 +1,27 @@
+{
+  "name": "sckata_ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmrdn/sckata_ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmrdn/sckata_ts/issues"
+  },
+  "homepage": "https://github.com/gmrdn/sckata_ts#readme",
+  "dependencies": {
+    "typescript": "^3.9.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.1"
+  }
+}
